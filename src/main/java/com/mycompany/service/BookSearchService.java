@@ -32,13 +32,10 @@ public class BookSearchService {
     }
 
     @POST
-    public BookSearchDTO add(BookSearchDTO dto) {
-        return bookSearchLogic.add(dto);
-    }
-
-    @PUT
-    public BookSearchDTO update(BookSearchDTO dto) {
-        return bookSearchLogic.update(dto);
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response add(BookSearchDTO dto) {
+        Response response = Response.status(201).header("Access-Control-Allow-Origin", "*").entity(bookSearchLogic.add(dto)).build();
+        return response;
     }
 
     @GET
