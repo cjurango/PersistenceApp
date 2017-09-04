@@ -1,0 +1,21 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.mycompany.interfaces;
+
+import com.mycompany.model.dto.model.BookSearchDTO;
+import java.util.List;
+
+/**
+ *
+ * @author Carlos Urango
+ */
+public interface IBookSearchLogic {
+    
+    public BookSearchDTO add(BookSearchDTO dto);
+    public BookSearchDTO update(BookSearchDTO dto);
+    public List<BookSearchDTO> all();
+    
+}
